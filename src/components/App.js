@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 
-const FruitSearch = ({ fruits }) => {
+export default function App() {
+
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredFruits, setFilteredFruits] = useState([]);
-
+  //fruits array
+  const fruits =  ["apple", "banana", "cherry", "date", 'Grapes', 'Pineapple', "elderberry", 'Orange', "fig"]
   const handleSearch = (event) => {
     const { value } = event.target;
     setSearchTerm(value);
@@ -17,6 +19,7 @@ const FruitSearch = ({ fruits }) => {
 
   return (
     <div>
+     <h3>Search item</h3>       
       <input
         type="text"
         placeholder="Search fruits..."
@@ -31,17 +34,3 @@ const FruitSearch = ({ fruits }) => {
     </div>
   );
 };
-
-
-const fruits =  ["apple", "banana", "cherry", "date", 'Grapes', 'Pineapple', "elderberry", 'Orange', "fig"]
-  
-export default function App() {
-  return (
-    <div>
-        <ul id="no-bullets" >  
-            <li><h3>Search item</h3></li> 
-        </ul>      
-      <FruitSearch fruits={fruits} />
-    </div>
-  );
-}
