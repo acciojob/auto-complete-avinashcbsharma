@@ -33,13 +33,15 @@ const FruitSearch = ({ fruits }) => {
 };
 
 
-const fruitsArray =  ["apple", "banana", "cherry", "date", 'Grapes', 'Pineapple', "elderberry", 'Orange', "fig"]
+const fruits =  ["apple", "banana", "cherry", "date", 'Grapes', 'Pineapple', "elderberry", 'Orange', "fig"]
   
 export default function App() {
   return (
     <div>
-      <h1>Search item</h1>
-      <FruitSearch fruits={fruitsArray} />
+        <ul id="no-bullets" >  
+            <li><h3>Search item</h3></li> 
+        </ul>      
+      <FruitSearch fruits={fruits} />
     </div>
   );
 }
